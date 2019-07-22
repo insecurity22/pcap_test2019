@@ -18,11 +18,12 @@ void print_mac(const u_char* packet) {
            packet[0], packet[1], packet[2], packet[3], packet[4], packet[5]);
 }
 
-void print_ip(u_int32_t ipaddr) {
+void print_ip(u_int32_t ipaddr) {   // https://stackoverflow.com/questions/1680365/integer-to-ip-address-c
 
     struct in_addr ip_addr;
     ip_addr.s_addr = ipaddr;
     printf("%s\n", inet_ntoa(ip_addr));
+    
 }
 
 int main(int argc, char *argv[])
